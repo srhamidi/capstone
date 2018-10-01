@@ -1,0 +1,45 @@
+input {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  min-height: 12rem;
+  font-size: inherit;
+}
+
+#main {
+  text-align: left;
+  justify-items: auto;
+}
+#submit {
+  grid-area: submit;
+  justify-self: end;
+}
+
+@media only screen and (max-width: 1100px) {
+  .sell {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  form {
+    grid-template-areas: 'name name'
+                         'description description'
+                         '. submit';
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  form {
+    grid-template-areas: 'name'
+                         'description'
+                         'submit';
+  }
+
+  #submit {
+    justify-self: center;
+  }
+}
